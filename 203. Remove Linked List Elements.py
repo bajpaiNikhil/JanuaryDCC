@@ -5,20 +5,19 @@ class Node:
 
 def removeValue(root , target):
     if not root:
-        return []
+        return None
 
     head = root
 
-    while root:
-        if head.val  == target:
-            head.next = root.next
+    while root and root.val == target:
+        root = root.next
 
-
-
-
-
-
-
+    while head is not None:
+        if head.next is not None and head.next.val == target :
+            head.next = head.next.next
+        else:
+            head = head.next
+    return root
 
 root = Node(1)
 root.next = Node(2)
