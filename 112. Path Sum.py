@@ -36,6 +36,7 @@ def allPath(node, l, target):
 
 
 
+
 root = TreeNode(5)
 root.left = TreeNode(4)
 root.right = TreeNode(8)
