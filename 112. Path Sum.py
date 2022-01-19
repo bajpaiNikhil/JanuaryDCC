@@ -5,34 +5,21 @@ class TreeNode:
         self.right = right
 
 
-def isLeaf(node):
-    return node.left is None and node.right is None
+
 
 
 def pathSum(root, target):
+
     if root is None:
-        return
+        return False
 
-    return allPath(root, [], target)
+    else:
+        if root.left is None and root.right is None and root.val == target:
+            return True
+        else:
+            return pathSum(root.left , target-root.val) or pathSum(root.right , target-root.val)
 
 
-def allPath(node, l, target):
-
-    if node is None:
-        return
-
-    l.append(node.val)
-
-    if isLeaf(node):
-        #print(l)
-        l+=l
-        return l
-        # if sum(l) == target:
-        #     return True
-        # return True
-    allPath(node.left, l, target , )
-    allPath(node.right, l, target , )
-    l.pop()
 
 root = TreeNode(5)
 root.left = TreeNode(4)
@@ -45,4 +32,4 @@ root.right.left = TreeNode(13)
 root.right.right = TreeNode(4)
 root.right.right.right = TreeNode(1)
 
-print(pathSum(root, 22))
+print(pathSum(root, 221))
