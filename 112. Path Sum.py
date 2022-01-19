@@ -35,6 +35,7 @@ def allPath(node, l, target):
     l.pop()
 
 
+
 root = TreeNode(5)
 root.left = TreeNode(4)
 root.right = TreeNode(8)
