@@ -2,6 +2,7 @@ intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
 
 d = sorted(intervals, key=lambda i: i[0])
 print(d)
+
 extraArray = []
 for i in d:
     print(i)
