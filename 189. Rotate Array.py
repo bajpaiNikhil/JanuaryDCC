@@ -3,3 +3,5 @@ k = 3
 
 left = 0
 right = len(nums)
+
+
