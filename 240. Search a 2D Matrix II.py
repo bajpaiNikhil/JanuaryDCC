@@ -6,7 +6,6 @@ matrix = [[1, 4, 7, 11, 15], [2, 5, 8, 12, 19],
 #           [10,13,14,17,24],[18,21,23,26,30]]
 target = 5
 
-
 def binarySearch(arrayIs , target , left  , right):
     while right>=left:
         mid =  left+(right-left)//2
