@@ -25,6 +25,7 @@ def findCycleInLl2(root):
         slow = slow.next
         fast = fast.next.next
 
+
         if slow == fast:
             return True
     else:
