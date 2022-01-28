@@ -10,3 +10,4 @@ m = []
 for i in range( 0 , len(s) , k):
     m.append(s[i:i+k])
 print(m)
+
